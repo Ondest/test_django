@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Language Translation Table</h1>
+    <table class="words_list">
+        <thead>
+        <tr>
+            <td>Word</td>
+            <td>Translation</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for r in dictionarymodel_list %}
+            <tr>
+                <td>{{ r.word_1 }}</td>
+                <td>{{ r.word_2 }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
